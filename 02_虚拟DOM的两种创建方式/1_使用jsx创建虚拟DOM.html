@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>hello_react</title>
+    <title>1_使用jsx创建虚拟DOM</title>
 </head>
 
 <body>
@@ -28,7 +28,11 @@
     <script type="text/babel">
         //1.创建虚拟DOM
         //不用给h1标签写引号，因为不是字符串 是虚拟dom
-        const VDOM = <h1>Hello,React!</h1>
+        const VDOM = (
+            <h1 id="title">
+                <span>Hello,React!</span>
+            </h1>
+        )
 
         //2.渲染虚拟DOM到页面
         ReactDOM.render(VDOM, document.getElementById('test'))
