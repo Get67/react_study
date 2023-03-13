@@ -1,18 +1,10 @@
 
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
-import Test from './pages/Test'
-
-
 import Header from './components/Header'
 import MyNavLink from './components/MyNavLink'
-
-
-
-
-
 export default class App extends Component {
 
     render() {
@@ -38,7 +30,6 @@ export default class App extends Component {
                             <MyNavLink to="/home"> Home</MyNavLink>
 
 
-
                         </div>
                     </div>
                     <div className="col-xs-6">
@@ -46,12 +37,11 @@ export default class App extends Component {
                             <div className="panel-body">
                                 {/* <Home />
                               <About /> */}
-                                <Switch>
-                                    {/* 注册路由 */}
-                                    <Route path="/about" component={About} />
-                                    <Route path="/home" component={Home} />
-                                    <Route path="/home" component={Test} />
-                                </Switch>
+
+                                {/* 注册路由 */}
+                                <Route path="/about" component={About} />
+                                <Route path="/home" component={Home} />
+
                             </div>
                         </div>
                     </div>

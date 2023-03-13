@@ -1,17 +1,9 @@
 
 import React, { Component } from 'react'
-import { Route, Switch } from 'react-router-dom'
+import { NavLink, Route } from 'react-router-dom'
 import Home from './pages/Home'
 import About from './pages/About'
-import Test from './pages/Test'
-
-
 import Header from './components/Header'
-import MyNavLink from './components/MyNavLink'
-
-
-
-
 
 export default class App extends Component {
 
@@ -32,10 +24,9 @@ export default class App extends Component {
 
                             {/*  <a className="list-group-item" href="./about.html">About</a>
                             <a className="list-group-item active" href="./home.html">Home</a> */}
-                            {/* 
-                            <NavLink activeClassName='atguigu' className="list-group-item" to="/home">Home</NavLink> */}
-                            <MyNavLink to="/about"  >About</MyNavLink>
-                            <MyNavLink to="/home"> Home</MyNavLink>
+
+                            <NavLink activeClassName='atguigu' className="list-group-item" to="/about">About</NavLink>
+                            <NavLink activeClassName='atguigu' className="list-group-item" to="/home">Home</NavLink>
 
 
 
@@ -46,12 +37,11 @@ export default class App extends Component {
                             <div className="panel-body">
                                 {/* <Home />
                               <About /> */}
-                                <Switch>
-                                    {/* 注册路由 */}
-                                    <Route path="/about" component={About} />
-                                    <Route path="/home" component={Home} />
-                                    <Route path="/home" component={Test} />
-                                </Switch>
+
+                                {/* 注册路由 */}
+                                <Route path="/about" component={About} />
+                                <Route path="/home" component={Home} />
+
                             </div>
                         </div>
                     </div>

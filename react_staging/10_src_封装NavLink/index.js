@@ -5,15 +5,15 @@ import ReactDOM from 'react-dom'
 //引入App
 import App from './App'
 //引入BrowserRouter
-import { HashRouter } from 'react-router-dom'
+import { BrowserRouter } from 'react-router-dom'
 
 
 
 //渲染App到页面
 ReactDOM.render(
-    <HashRouter>
+    <BrowserRouter>
         <App />
-    </HashRouter>
+    </BrowserRouter>
     , document.getElementById('root'))
 
 
